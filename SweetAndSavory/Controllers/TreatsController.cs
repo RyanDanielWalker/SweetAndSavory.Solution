@@ -83,7 +83,7 @@ namespace SweetAndSavory.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddFlavor(Flavor treat, int FlavorId)
+    public ActionResult AddFlavor(Treat treat, int FlavorId)
     {
       if (FlavorId != 0)
       {
