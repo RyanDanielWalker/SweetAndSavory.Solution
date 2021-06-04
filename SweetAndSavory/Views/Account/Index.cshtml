@@ -11,7 +11,10 @@
   <p>Hello @User.Identity.Name!</p>
   @using (Html.BeginForm("LogOff", "Account"))
   {
-    <input type="submit" class="btn btn-outline-dark" value="Log out" />
+    <div class="flex">
+  <input type="submit" class="btn btn-outline-dark" value="Log out" />
+  @Html.ActionLink("Home", "Index", "Home", null, new {@class="btn btn-outline-dark"})
+</div>
   }
 }
 else
