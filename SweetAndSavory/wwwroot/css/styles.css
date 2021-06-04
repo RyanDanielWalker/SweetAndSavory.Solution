@@ -27,13 +27,15 @@ input{
 .form-control {
   margin:auto;
   width: 75%;
+  height: 10%;
+  margin-bottom: 10px;
 }
-.form-control:focus {
+/* .form-control:focus {
   border-color: whitesmoke;
   box-shadow: 0 0 5px 2px rgba(166, 23, 173, 0.4);
   background-color: rgba(166, 23, 173, 0.4);
   color: black;
-}
+} */
 
 ul {
   list-style-type: none;
