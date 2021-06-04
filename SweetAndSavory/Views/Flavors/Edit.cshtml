@@ -11,8 +11,11 @@
   @Html.HiddenFor(model => model.FlavorId)
 
   @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {@class="form-control", required = "required", placeholder = $"{Model.Name}"})
 
   <input type="submit" value="Save" class="btn btn-outline-primary" />
 }
-<p>@Html.ActionLink("View All Flavors", "Index")</p>
+<div class="flex">
+  @Html.ActionLink("Back to Flavors", "Index", "Flavors", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-outline-dark"})
+</div>

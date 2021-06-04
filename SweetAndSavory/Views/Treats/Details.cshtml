@@ -30,9 +30,9 @@ else
 <div class="flex">
   @Html.ActionLink("Add A Flavor", "AddFlavor", new { id = Model.TreatId }, new { @class = "btn btn-outline-dark"})
   @Html.ActionLink($"Edit {Model.Name}", "Edit", "Treats", new {id = Model.TreatId}, new { @class = "btn btn-outline-dark" })
-  @Html.ActionLink($"Delete {Model.Name}", "Delete", "Treats", new {id = Model.TreatId}, new {@class = "btn btn-outline-dark"})
+  @Html.ActionLink($"Delete {Model.Name}", "Delete", "Treats", new {id = Model.TreatId}, new {@class = "btn btn-outline-danger", @style="margin-bottom: 5px"})
 </div>
 <div class="flex">
-  @Html.ActionLink("Show All Treats", "Index", "Treats", null, new {@class = "btn btn-outline-dark"})
-  @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})
+  @Html.ActionLink("Show All Treats", "Index", "Treats", null, new {@class = "btn btn-outline-dark", @style="margin-top: 5px"})
+  @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark", @style="margin-top: 5px"})
   </div>

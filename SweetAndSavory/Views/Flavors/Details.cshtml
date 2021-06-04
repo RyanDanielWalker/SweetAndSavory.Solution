@@ -8,7 +8,7 @@
 
 @if (@Model.JoinEntities.Count == 0)
 {
-  <p>There are currently no available treats for this flavor.</p>
+  <p>There are currently no available treats with this flavor.</p>
 }
 else
 {
@@ -26,3 +26,12 @@ else
     }
   </ul>
 }
+<div class="flex">
+  @Html.ActionLink("Add A Treat", "AddTreat", new { id = Model.FlavorId }, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink($"Edit {Model.Name}", "Edit", "Flavors", new {id = Model.FlavorId}, new { @class = "btn btn-outline-dark" })
+  @Html.ActionLink($"Delete {Model.Name}", "Delete", "Flavors", new {id = Model.FlavorId}, new {@class = "btn btn-outline-danger", @style="margin-bottom: 5px"})
+</div>
+<div class="flex">
+  @Html.ActionLink("Show All Flavors", "Index", "Flavors", null, new {@class = "btn btn-outline-dark", @style="margin-top: 5px"})
+  @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark", @style="margin-top: 5px"})
+  </div>
