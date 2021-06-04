@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SweetAndSavory.Models.Item
+
+<h2>Edit @Html.DisplayFor(model => model.Name)</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.TreatId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @* @Html.Label("Select flavor")
+  @Html.DropDownList("FlavorId", "-select-") *@
+
+  <input type="submit" value="Save" class="btn btn-outline-primary" />
+}
+
+<p>@Html.ActionLink("View All Treats", "Index")</p>
