@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ToDoList.Models.Flavor
+
+<h2><span class="underLine">Details for @Html.DisplayFor(model => model.Name)</span></h2>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>There are currently no available treats for this flavor.</p>
+}
+else
+{
+  <h4>Treats of this flavor:</h4>
+  <ul>
+  @foreach (var join in Model.JoinEntities)
+    {
+      <h5>@Html.ActionLink($"{join.Treat.Name}", "Details","Treats", new { id = join.Treat.TreatId })</h5>
+      @using (Html.BeginForm("DeleteTreat", "Flavors"))
+      {
+        @Html.Hidden("joinId", @join.FlavorTreatId)
+        <input type="submit" value="Delete" class="btn btn-outline-danger" />
+        <hr style="width: 75%;" />
+      }
+    }
+  </ul>
+}
