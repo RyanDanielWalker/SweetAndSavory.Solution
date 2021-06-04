@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Welcome to Pierre's Sweet and Savory Treats!</h1>
+<div class="flex">
+  @Html.ActionLink("See All Flavors", "Index", "Flavors", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("See All Treats", "Index", "Treats", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Create An Account", "Index", "Account", null, new {@class = "btn btn-outline-dark"})
+</div>

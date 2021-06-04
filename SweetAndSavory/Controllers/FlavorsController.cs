@@ -39,7 +39,7 @@ namespace SweetAndSavory.Controllers
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
       flavor.User = currentUser;
-      _db.Treats.Add(flavor);
+      _db.Flavors.Add(flavor);
       _db.SaveChanges();
       if (TreatId != 0)
       {
