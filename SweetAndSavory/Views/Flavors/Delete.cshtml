@@ -10,4 +10,7 @@
 {
   <input type="submit" value="Delete" class="btn btn-outline-danger" />
 }
-@Html.ActionLink("View All Flavors", "Index")
+<div class="flex">
+  @Html.ActionLink("Back to Flavors", "Index", "Flavors", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})
+</div>
