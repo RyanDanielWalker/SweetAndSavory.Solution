@@ -16,4 +16,7 @@
   <input type="submit" value="Save" class="btn btn-outline-primary" />
 }
 
-<p>@Html.ActionLink("View All Favors", "Index")</p>
+<div class="flex">
+  @Html.ActionLink("Back to Flavors", "Index", "Flavors", null, new { @class = "btn btn-outline-dark"})
+  @Html.ActionLink("Home", "Index", "Home", null, new {@class = "btn btn-outline-dark"})
+</div>
